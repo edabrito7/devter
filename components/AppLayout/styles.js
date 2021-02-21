@@ -1,27 +1,25 @@
-import css from 'styled-jsx/css'
+import css from "styled-jsx/css";
 
-import {fonts, colors} from '../../styles/themes';
-import {addOpacityToColor} from '../../styles/utils';
-import {breakpoints} from '../../styles/themes'
+import { fonts, colors, breakpoints } from "../../styles/themes";
+import { addOpacityToColor } from "../../styles/utils";
 
 const backgroundColor = addOpacityToColor(colors.primary, 0.8);
-
 
 export const globalStyles = css.global`
   html,
   body {
-    background-image:
-      radial-gradient(${backgroundColor} 1px, #fdfdfd 1px),
+    background-image: radial-gradient(${backgroundColor} 1px, #fdfdfd 1px),
       radial-gradient(${backgroundColor} 1px, #fdfdfd 1px);
     background-position: 0 0, 25px 25px;
     background-size: 50px 50px;
     padding: 0;
     margin: 0;
-    font-family: ${fonts.base}
+    font-family: ${fonts.base};
   }
   * {
     box-sizing: border-box;
-  }`
+  }
+`;
 
 export default css`
             div {
@@ -42,4 +40,4 @@ export default css`
                     height: 90vh;
                     width: ${breakpoints.mobile};
                 }
-            }`
+            }`;

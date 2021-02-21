@@ -1,15 +1,15 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   return (
-  <>
-  <Head>
-    <title>Devter</title>
-    <link rel="icon" href="/favicon.ico" />
-  </Head>
-  <Component {...pageProps} />
-  </>
-  )
+    <>
+      <Head>
+        <title>Devter</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
