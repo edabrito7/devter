@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 
 import Applayout from 'components/AppLayout'
-import Avatar from 'components/Avatar'
+
 import Devit from 'components/devit';
 
 export default function HomePage () {
@@ -39,23 +39,27 @@ export default function HomePage () {
             <style jsx>{`
                 header {
                     align-items: center;
+                    background: #ffffffaa;
+                    backdrop-filter: blur(5px);
                     display: flex;
                     height: 49px;
-                    border-bottom: 1px solid #ccc;
+                    border-bottom: 1px solid #eee;
                     position: sticky;
                     top: 0;
                     width: 100%;
                 }   
 
-                
-                
-                section {
-                    padding-top: 100px;
+                h2 {
+                    font-size: 21px;
+                    font-weight: 800;
+                    padding-left: 15px;
                 }
+                
 
                 nav {
+                    background: #fff;
                     bottom: 0;
-                    border-top: 1px solid #ccc;
+                    border-top: 1px solid #eee;
                     position: fixed;
                     height: 49px;
                     width: 100%;

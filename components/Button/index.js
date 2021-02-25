@@ -1,7 +1,12 @@
-export default function Button({ children, onClick }) {
+export default function Button({ children, onClick, disabled }) {
   return (
     <>
-      <button onClick={onClick}>{children}</button>
+      <button 
+      onClick={onClick}
+      disabled={disabled}
+      >
+        {children}
+      </button>
 
       <style jsx>{`
         button {
@@ -16,6 +21,12 @@ export default function Button({ children, onClick }) {
           font-weight: 800;
           padding: 0.5em 1.5em;
           transition: opacity 0.2s ease;
+          user-select: none;
+        }
+
+        button[disabled] {
+          opacity: 0.2;
+          pointer-events: none;
         }
 
         button > :global(svg) {
