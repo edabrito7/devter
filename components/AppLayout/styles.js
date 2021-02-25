@@ -32,6 +32,7 @@ export default css`
                 background #fff;
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
                 width: 100%;
+                position: relative;
                 height: 100%;
             }
 

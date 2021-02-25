@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
-import Applayout from "../components/AppLayout/index";
-import Button from "../components/Button";
-import GitHubIcon from "../components/Icons/Github";
-import { colors } from "../styles/themes";
 
-import { loginWithGitHub, onAuthStateChanged } from "../firebase/client";
+import Applayout from "components/AppLayout/index";
+import Button from "components/Button";
+import GitHubIcon from "components/Icons/Github";
+import Avatar from 'components/Avatar/index';
+
+import { colors } from "styles/themes";
+
+import { loginWithGitHub, onAuthStateChanged } from "firebase/client";
 
 export default function Home() {
   const [user, setUser] = useState(undefined);
@@ -40,10 +43,11 @@ export default function Home() {
               </Button>
             )}
             {user && user.avatar && (
-              <div>
-                <img src={user.avatar} alt="avatar user" />
-                <strong>{user.username}</strong>
-              </div>
+              <Avatar 
+                src={user.avatar} 
+                alt={`${user.username} avatar`} 
+                text={user.username}
+              />
             )}
           </div>
         </section>
