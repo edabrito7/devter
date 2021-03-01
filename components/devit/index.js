@@ -1,15 +1,22 @@
 import Avatar from 'components/Avatar'
 
-export default function Devit ({avatar, username, message, id}) {
+export default function Devit ({avatar, userName, content, id, sharedCount, likesCounts, createdAt}) {
     return(
         <>
         <article>
             <div>
-                <Avatar src={avatar} alt={username}/>
+                <Avatar src={avatar} alt={userName}/>
             </div>
             <section>
-                <strong>{username}</strong>
-                <p>{message}</p>
+                <header>
+                    <strong>{userName}</strong>
+                    <date>{createdAt}</date>
+                </header>
+                <p>{content}</p>
+                <div>
+                    <span>{sharedCount}</span>
+                    <span>{likesCounts}</span>
+                </div>
             </section>
         </article>
 
