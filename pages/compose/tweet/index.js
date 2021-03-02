@@ -7,6 +7,7 @@ import Button from 'components/Button'
 import { useRouter } from 'next/router'
 
 import { addDevit } from 'firebase/client'
+import Head from 'next/head';
 
 const COMPOSE_STATES = {
     USER_NOT_KNOW: 0,
@@ -46,6 +47,9 @@ export default function ComposeTweet () {
 
     return(
         <>
+            <Head>
+                <title>Crear Devit / Tweet</title>
+            </Head>
             <AppLayout>
                 <form onSubmit={handleSubmit}>
                     <textarea

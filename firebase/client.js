@@ -53,6 +53,7 @@ export const addDevit = ({avatar, content, userName, userUid}) => {
 
 export const fetchLatestDevits = () => {
   return db.collection("devits")
+  .orderBy("createdAt", "desc")
   .get()
   .then(snapshot => {
     return snapshot.docs.map(doc => {
