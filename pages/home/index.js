@@ -41,6 +41,7 @@ export default function HomePage () {
                             avatar={devit.avatar}
                             content={devit.content}
                             id={devit.id}
+                            img={devit.img}
                             createdAt={devit.createdAt}
                             likes={devit.likesCount}
                             shared={devit.sharedCount}

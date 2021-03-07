@@ -2,7 +2,7 @@ import Avatar from 'components/Avatar'
 
 import useTimeAgo from 'hooks/useTimeAgo'
 
-export default function Devit ({avatar, userName, content, id, sharedCount, likesCounts, createdAt}) {
+export default function Devit ({avatar, userName, content, id, sharedCount, likesCounts, createdAt, img}) {
      const timeAgo = useTimeAgo(createdAt)
 
     return(
@@ -18,6 +18,7 @@ export default function Devit ({avatar, userName, content, id, sharedCount, like
                     <date>{timeAgo}</date>
                 </header>
                 <p>{content}</p>
+                {img && <img src={img}/>}
                 <div>
                     <span>{sharedCount}</span>
                     <span>{likesCounts}</span>
@@ -39,6 +40,12 @@ export default function Devit ({avatar, userName, content, id, sharedCount, like
             span {
                 margin: 0 5px;
             }  
+
+            img {
+                border-radius: 10px;
+                height: auto;
+                width: 100%;
+            }
 
             date {
                 color: #555;
