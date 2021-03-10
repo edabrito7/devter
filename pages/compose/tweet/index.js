@@ -105,7 +105,6 @@ export default function ComposeTweet () {
             <Head>
                 <title>Crear Devit / Tweet</title>
             </Head>
-            <AppLayout>
                 <section className='form-container'>
                     <div className='avatar-container'>
                         <Avatar src={user?.avatar}/>
@@ -130,8 +129,6 @@ export default function ComposeTweet () {
                         </div>
                     </form>
                 </section>
-                
-            </AppLayout>
             <style jsx>{`
 
                 form {

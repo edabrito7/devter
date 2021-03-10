@@ -28,7 +28,6 @@ export default function HomePage () {
             <Head>
                 <title>Inicio / Home</title>
             </Head>
-            <Applayout>
                 <header>
                     <h2>Inicio</h2>
                 </header>
@@ -66,7 +65,6 @@ export default function HomePage () {
                         </a>
                     </Link>
                 </nav>
-            </Applayout>
             <style jsx>{`
                 header {
                     align-items: center;

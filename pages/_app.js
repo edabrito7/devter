@@ -1,5 +1,7 @@
 import Head from "next/head";
 
+import AppLayout from 'components/AppLayout'
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -7,7 +9,9 @@ function MyApp({ Component, pageProps }) {
         <title>Devter</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Component {...pageProps} />
+      <AppLayout>
+        <Component {...pageProps} />
+      </AppLayout>
     </>
   );
 }

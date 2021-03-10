@@ -27,7 +27,6 @@ export default function Home() {
 
   return (
     <>
-      <Applayout>
         <section>
           <img src="./devter.png" alt="Logo" />
           <h1>Devter</h1>
@@ -52,7 +51,6 @@ export default function Home() {
             )}
           </div>
         </section>
-      </Applayout>
 
       <style jsx>{`
         section {

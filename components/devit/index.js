@@ -1,13 +1,23 @@
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+
 import Avatar from 'components/Avatar'
 
 import useTimeAgo from 'hooks/useTimeAgo'
 
 export default function Devit ({avatar, userName, content, id, sharedCount, likesCounts, createdAt, img}) {
      const timeAgo = useTimeAgo(createdAt)
+     const router = useRouter()
+
+
+    const handleArticleClick = (event) => {
+        event.preventDefault()
+        router.push(`/status/${id}`)
+    }
 
     return(
         <>
-        <article>
+        <article onClick={handleArticleClick}>
             <div>
                 <Avatar src={avatar} alt={userName}/>
             </div>
@@ -15,7 +25,11 @@ export default function Devit ({avatar, userName, content, id, sharedCount, like
                 <header>
                     <strong>{userName}</strong>
                     <span>-</span>
-                    <date>{timeAgo}</date>
+                    <Link  href={`/status/${id}`}>
+                        <a>
+                            <time>{timeAgo}</time>
+                        </a>
+                    </Link>
                 </header>
                 <p>{content}</p>
                 {img && <img src={img}/>}
@@ -35,7 +49,12 @@ export default function Devit ({avatar, userName, content, id, sharedCount, like
                 border-bottom: 2px solid #eaf7ff;
                     display: flex;
                     padding: 10px 15px;
-            }   
+            } 
+
+            article:hover {
+                background: #f5f8fa;
+                cursor: pointer;
+            }  
 
             span {
                 margin: 0 5px;
@@ -47,7 +66,17 @@ export default function Devit ({avatar, userName, content, id, sharedCount, like
                 width: 100%;
             }
 
-            date {
+            a {
+                color: #555;
+                font-size: 14px;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            time {
                 color: #555;
                 font-size: 14px;
             }
