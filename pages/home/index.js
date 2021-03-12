@@ -94,7 +94,7 @@ export default function HomePage () {
                     bottom: 0;
                     border-top: 1px solid #eee;
                     display: flex;
-                    position: fixed;
+                    position: sticky;
                     height: 49px;
                     width: 100%;
                 }
